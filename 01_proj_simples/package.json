@@ -1,0 +1,24 @@
+{
+  "name": "proj-simples",
+  "version": "1.0.0",
+  "description": "Exemplos de códigos vue-js",
+  "main": "logica.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antonioEDER/Vuejs-Exemplos.git"
+  },
+  "author": "Eder Antonio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antonioEDER/Vuejs-Exemplos/issues"
+  },
+  "homepage": "https://github.com/antonioEDER/Vuejs-Exemplos#readme",
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "font-awesome": "^4.7.0",
+    "vue-resource": "^1.5.1"
+  }
+}
