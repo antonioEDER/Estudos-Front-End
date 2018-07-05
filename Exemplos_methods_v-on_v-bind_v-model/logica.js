@@ -10,6 +10,7 @@ var home = new Vue({
         ],
         novo:"",
         elementos:[],
+        mensagem:"",
     },
     methods:{
         adicionarElemento(e){
@@ -22,6 +23,9 @@ var home = new Vue({
         },
         removerElemento(index){
             this.elementos.splice(index,1);
+        },
+        keyUp(){
+            alert(this.mensagem);
         }
     }
 });

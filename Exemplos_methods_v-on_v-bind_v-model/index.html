@@ -32,11 +32,21 @@
             <li v-for="(elemento, index) in elementos">
                 {{elemento.titulo}}
                 <i v-on:click="removerElemento(index)" class="far fa-times-circle"></i>
-
-
             </li>
         </ul>
     </div>
+
+    <div class="row">
+        <input class="form-control" v-on:keyup="keyUp()" type="text" v-model="mensagem">
+    </div>
+
+    <div v-bind:class="['row', {'text-danger': true}]" :style="{ fontSize: 12 + 'px' }">
+        <span>
+            Mudei de Cor
+        </span>
+    </div>
+   
+    
 
 </div>
 <script src="./node_modules/jquery/dist/jquery.js"></script>

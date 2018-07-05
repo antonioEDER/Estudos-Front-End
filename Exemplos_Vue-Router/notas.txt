@@ -1,0 +1,9 @@
+1º criar projeto simples.
+    - terminal ( npm init )
+
+2º Instalar dependencias.
+    - terminal (  npm install jquery vue vue-resource bootstrap font-awesome --save )
+
+---
+Exemplos:
+    - Vue-Router
