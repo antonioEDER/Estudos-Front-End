@@ -72,6 +72,28 @@
             </table>
         </div>
 
+        <div class="row">
+            <nav>
+                <ul class="pagination">
+                    <li v-bind:class="{'disabled': pagination.current === 1,'page-item':true}">
+                            <a class="page-link" href="#" v-on:click="paginaAnterior" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                    </li>
+                    <li v-for="(page, index) in pagination.listPagination"
+                        v-bind:class="{ 'active': pagination.current === index + 1, 'page-item':true }">
+                        <a class="page-link" href="#" v-on:click="paginaAtual($event,index)" >{{ index + 1 }}</a>
+                    </li>
+                    <li v-bind:class="{'disabled': pagination.current === pagination.totalPages, 'page-item':true}">
+                        <a class="page-link" href="#" v-on:click="paginaProxima" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        
+
 </div>
 
 <script src="./node_modules/jquery/dist/jquery.js"></script>
