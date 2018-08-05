@@ -1,0 +1,64 @@
+Iniciar um projeto vue-cli:
+    vue init webpack-simple vuex2
+
+º Para chamar no filho o  methodo do pai usar:
+    - this.$parent.Function("params");
+
+º Diferença entre v-if e v-show
+    -  v-show="view == 'tabela'" Oculta o compomente
+    -  v-if="view == 'tabela'" remove o compomente
+
+º Eventos no Vue
+    - $on('') observa alteração.
+    - $emit('') emite alteração.
+
+º Estado da aplicação = O conjunto de todas as configurações 
+º Fonte única da verdade = "Armazem" todas as suas informações, da aplicação, se concentrará em um único lugar.
+º Flux: implementação da font unica da verdade para adm os estado da aplicação.
+º Redux: implementação mais simples do Flux.
+
+ºVuex:
+    - Dispatch (Actions)
+    - Commit (Mutations)
+    - Mutate (State)
+    - Render (Component)
+    - npm install vuex --save
+
+Vuex.Store ==
+
+    state:{  //*Armazem de dados. // return store.state.view;
+        view: 'tabela',
+        times: []
+    },
+
+    getters: { //*Centralizar regras no armazém, // return store.getters.timesLibertadores;
+        timesLibertadores: state => state.times.slice(0, 6),
+        timesRebaixados: state => state.times.slice(16, 20),
+    },
+    mutations:{ //Update dos dados do armazem
+        update(state, time){
+            let index = state.times.findIndex(element => time.id == element.id);
+                if(index != -1){
+                state.times[index] = time;
+            }
+        },
+        'show-time-list'(state){
+            state.view = 'tabela';
+        },
+        //   store.commit('update', timeAdversario); Comitando alteração para update
+        //   store.commit('show-time-list'); Comitando alteração para show-time-list
+        //   obs: commit chama a mutação e a mutação altera o estado. O estado dispara um evento que atualiza as informações em todos os lugares,
+    },
+    actions:{
+        'load-times'(context){
+            Vue.http.get('http://localhost:8080/dist/times.json').then(response => {
+                let times = response.data.map(element => new Time(element.id, element.nome, element.escudo));
+                context.commit('set-times', times);
+            });
+        }
+        // store.dispatch('load-times'); Para enviar uma ação para o Mutations
+        //  OBS: As actions são muito parecidas com as mutations, 
+        //  a única diferença é que a ação vai acessar a mutação e dentro da ação 
+        //  podemos executar qualquer tipo de código, assíncrono, que quisermos.
+    }
+
