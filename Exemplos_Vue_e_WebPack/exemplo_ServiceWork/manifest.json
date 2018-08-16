@@ -1,0 +1,15 @@
+{
+    "name": "introdução ao PWA",
+    "short_name": "pWA",
+    "icons": [
+        {
+            "src": "",
+            "sizes": "128x128",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "index.html",
+    "display": "standalone",
+    "background-color": "#fff",
+    "theme_color": "#ff"
+}

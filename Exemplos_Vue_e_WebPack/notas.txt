@@ -1,3 +1,7 @@
+Progressive Web Apps PWA
 Comandos: 
  - npm install vue-cli
  - vue list
+ - vue init pwa
+
+ Ideologia: Ofline forst
