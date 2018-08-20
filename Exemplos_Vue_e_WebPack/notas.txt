@@ -5,3 +5,29 @@ Comandos:
  - vue init pwa
 
  Ideologia: Ofline forst
+
+ sudo yarn add vuefire firebase
+ criar projeto no firebase:
+  - https://console.firebase.google.com/u/0/?hl=pt-br&pli=1
+  - Adicionar o Firebase ao seu aplicativo da Web
+
+Criar na pasta static:
+  -f irebase-messaging-sw.js
+
+configura no manifest.json:
+  "gsm_sender_id":"103953800507",
+  "gsm_user_visible_only":true
+  
+Abrir o Postman:
+ url: POST https://fcm.googleapis.com/fcm/send
+ headers: Content-Type application/json
+ Authorization: ir ao firebase(Chave do servidor)
+ body: {
+"to":"dbFPkXZMqOo:APA91bHA4M45cXZFTA5vCzFuDtfZmT13pei5l_-vc97s8zlGtAzAY9MegFPvvyHTu9Z5EhG4Ef18nu4KwG8QDeUWngh9yDlYwzihJJoYR0B97Yw4U-849JRbrGP4EX6HDfDkuiGFt9em",
+	"notification":{
+	"title":"teste push",
+	"body":"Olá, tudo deu certo qté aqui!",
+	"click_action":"https://cargas.eucatur.com.br/",
+	"icon":"https://firebase.google.com/_static/e5a2a65914/images/firebase/lockup.png?hl=pt-br"
+	}
+}
