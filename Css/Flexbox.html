@@ -12,6 +12,7 @@
   display: flex;
   flex-wrap: wrap;
   background-color: DodgerBlue;
+  justify-content: center;
 }
 
 .flex-container > div {
@@ -37,9 +38,11 @@
   <div>4</div>
   <div>5</div>
   <div>6</div>  
-  <div>7</div>
+  <div style="flex-grow: 8">7</div>
   <div class="primeiro">8</div>
 </div>
+
+
 </body>
 </html>
 
@@ -48,6 +51,7 @@
    flex-direction: inherit;  define em qual direção o contêiner deseja empilhar os itens flexíveis.
    align-items: center; alinha o box
    order: -1; Altera o index de exibição
+  justify-content: center; alinha o flex box
    
 
  -->
