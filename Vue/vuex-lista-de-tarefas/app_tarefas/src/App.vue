@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
-     
+     <p>Lista {{$store.state.tarefas}}</p>
     </div>
     <router-view/>
   </div>

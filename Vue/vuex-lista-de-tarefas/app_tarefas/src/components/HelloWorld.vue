@@ -1,21 +1,24 @@
 <template>
   <div class="hello">
-  
-    <h2>Acessando State =  {{ $store.state.estado.pessoa.cpf }}</h2>
     
+    <!-- <div>Acessando State =  {{ $store.state.pessoa.cpf }}</div> -->
+    <Tarefas/>
   </div>
 </template>
 
 <script>
+import	Tarefas	from	'./Tarefas.vue'
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  components:{
+    Tarefas,
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h3 {
   margin: 40px 0 0;
