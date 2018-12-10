@@ -1,0 +1,5 @@
+- Node.js / Express
+- Abordagem Funcional (map `reduce` filter `forEach` and `find`)
+- JavaScript orientado a objetos.
+- JavaScript Expressões Regulares.
+- JavaScript Testes (https://github.com/avajs/ava)
